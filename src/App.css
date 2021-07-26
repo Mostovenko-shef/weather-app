@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+
+
+input {
+    top: 20px;
+    left: 40px;
+    width: 230px;
+    height: 20px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    color: #BCBCBC;
+    font: normal normal normal 14px/20px Jost;
+    border: 0px;
+    border-radius: 5px;
+    opacity: 1;
+    padding: 10px 10px 10px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+button {
+    top: 20px;
+    left: 310px;
+    width: 112px;
+    height: 40px;
+    background: #459DE9 0% 0% no-repeat padding-box;    
+    box-shadow: 0px 3px 6px #00000029;
+    border: 0px;
+    border-radius: 5px;
+    opacity: 1;
+    text-align: center;
+    font: normal normal normal 14px/20px Jost;
+    letter-spacing: 0px;
+    color: #FFFFFF;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+    top: 251px;
+    left: 55px;
+    width: 184px;
+    height: 64px;
+    text-align: left;
+    font: normal normal normal 44px/64px Jost;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    margin: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+sup {
+    width: 164px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.maincard {
+    top: 82px;
+    left: 40px;
+    width: 335px;
+    height: 247px;
+    background: #FFF1FE 0% 0% no-repeat padding-box;
+    font-family: Jost;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 5px;
+    opacity: 1;
+    margin: 22px 40px;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.cardtitle {
+    top: 92px;
+    width: 91px;
+    height: 23px;
+    text-align: left;
+    font: normal normal normal 16px/23px Jost;
+    margin-top: 10px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    left: 435px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cardsubtitle {
+    margin-top: 4px;
+}
+
+.feels {
+    font: normal normal normal 13px/19px Jost;
+    color: #C5C5C5;
+
+}
+
+.section {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    font: normal normal normal 12px/18px Jost;
+    letter-spacing: 0px;
+    opacity: 1;
+    text-align: right;
+}
+
+.weather {
+    display: inline-block;
+    width: 100%;
+}
+
+.droplist {
+    margin-left: 95%;
 }
