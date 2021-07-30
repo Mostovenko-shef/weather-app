@@ -1,41 +1,47 @@
 import React, { useState, useEffect } from 'react'
-// import LineChart from './LineChart';
+import { useTranslation, Trans } from 'react-i18next'
+import { I18nextProvider } from 'react-i18next';
+import i18next from 'i18next';
+// import GetGraph from '../GetGraph';
+
+
+
 
 function DisplayWeather(props) {
     const {data} = props;
-    const [feels_like,setFeelsLike] = useState('');
+    const { t, i18n } = useTranslation('');
     useEffect(()=> {
     },[])
-    // const iconurl = "http://openweathermap.org/img/wn/10d@2x.png" + `${data.weather[0].icon}` + ".png";
 
-    // class UnitsToggle extends Component {
-    //     handleToggle = (e) => {
-    //       this.props.onUnitChange({
-    //         unit: e.target.checked ? "f" : "c"
-    //       });
-    //     };
+    function deleteForm(id) {
+        let form = form.filter((form) => form.id !== id)
+    }
 
-    // }
 
     return <div className="displayweather">
         <div className="maincard">
            <span className="cardtitle">
-               {data.name}
+              {data.name}, {data.sys.country}
+              <span>{data.weather[0].description}</span>
+              <a href="http://openweathermap.org/img/wn/${icon}@2x.png"></a>
+              <button className="krest" onClick={() => deleteForm(data.id)}>x</button>
+           </span>
                <h4 className="cardsubtitle">
                {new Date().toLocaleDateString()}
                </h4>
-           </span>
-           {/* <LineChart/> */}
-           <h3>{Math.floor(data.main.temp - 273.15)}   <sup><sup>o</sup>C | <sup>o</sup>F</sup></h3>
-
-           {/* <img src={iconurl} className="weather-icon"/> */}
-           <span className="feels">
-               Feels like: {Math.floor(data.main.feels_like - 273.15)} 
-           </span>
+               {/* <GetGraph forecast3hrs={this.props.forecast3hrs} /> */}
            <div className="section">
-                <p><b>Wind:</b> {Math.floor((data.wind.speed *18)/5)} m/s</p>
-                <p><b>Humidity:</b> {data.main.humidity} % </p>
-                <p><b>Pressure:</b> {data.main.pressure} Pa</p>
+                <div className="temp">
+                <h3>{Math.floor(data.main.temp - 273.15)}   <sup><sup>o</sup>C | <sup>o</sup>F</sup></h3>
+                <span className="feels">
+                    {t('Feels like')}: {Math.floor(data.main.feels_like - 273.15)} 
+                </span>
+                </div>
+                <div className="characteristics">
+                <p><b>{t('Wind')}:</b> {Math.floor((data.wind.speed *18)/5)} {t('m/s')}</p>
+                <p><b>{t('Humidity')}:</b> {data.main.humidity} % </p>
+                <p><b>{t('Pressure')}:</b> {data.main.pressure} {t('Pa')}</p>
+                </div>
             </div>
         </div>
       </div>   

@@ -1,24 +1,18 @@
 import React, {useState, Component} from 'react'
-import { render } from 'react-dom'
+import { useTranslation, Trans } from 'react-i18next'
 import DisplayWeather from './DisplayWeather';
+
+const lngs = {
+    en: { nativeName: 'EN' },
+    ru: { nativeName: 'RU' },
+    ua: { nativeName: 'UA' }
+};
 
 function Weather() {
     const APIKEY = '7152601474c1cf9265871aef6014d011';
-
+    const { t, i18n } = useTranslation('');
     const [form, setForm] = useState({ city:"" });
     const [weather, setWeather] = useState([]);
-
-
-    // componentDidMount() ;{
-    //     navigator.geolocation.getCurrentPosition(
-    //       function(position) {
-    //           console.log(position);
-    //       },
-    //       function(error) {
-    //           console.error('Error code = ' + error.code + ' - ' + error.message);
-    //       }
-    //     );
-    // }
 
 
     const weatherData = async (e) => {
@@ -53,18 +47,21 @@ function Weather() {
                 <input 
                   type="text" 
                   name="city" 
-                  placeholder="City name..." 
+                  placeholder={t("City name...")} 
                   onChange={e => handleChange(e)}
                 />
                 &nbsp;&nbsp;&nbsp;
                 <button className="getweather" onClick={e => weatherData(e)}>
-                    Add
+                {t('Add')}
                 </button>
-                <select className="droplist">
-                    <option>EN</option>
-                    <option>UA</option>
-                    <option>RU</option>
-                 </select>
+                &nbsp;&nbsp;&nbsp;
+                {Object.keys(lngs).map((lng) => (
+                <select key={lng} type="submit" onClick={() => i18n.changeLanguage(lng)}>              
+                  <option>{lngs[lng].nativeName}</option>
+                {/* //   <option>{lngs[lng].nativeName}</option> 
+                //   <option>{lngs[lng].nativeName}</option>    */}
+                </select>
+                ))}
             </form>
             {weather.data != undefined ? <div><DisplayWeather data={weather.data}/></div> : null}
         </div>

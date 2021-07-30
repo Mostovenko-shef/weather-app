@@ -1,5 +1,3 @@
-
-
 input {
     top: 20px;
     left: 40px;
@@ -16,7 +14,7 @@ input {
     margin-top: 20px;
     margin-left: 40px;
 }
-button {
+.getweather {
     top: 20px;
     left: 310px;
     width: 112px;
@@ -49,10 +47,24 @@ sup {
     width: 164px;
 }
 
+.feels {
+    font: normal normal normal 13px/19px Jost;
+    color: #C5C5C5;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.temp {
+    width: fit-content;
+    height: 70px;
+    display: flex;
+    flex-direction: column
+}
+
 .maincard {
     top: 82px;
     left: 40px;
-    width: 335px;
+    width: 325px;
     height: 247px;
     background: #FFF1FE 0% 0% no-repeat padding-box;
     font-family: Jost;
@@ -63,39 +75,39 @@ sup {
     padding-left: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-right: 10px;
 }
 
 .cardtitle {
     top: 92px;
-    width: 91px;
+    width: inherit;
     height: 23px;
     text-align: left;
     font: normal normal normal 16px/23px Jost;
-    margin-top: 10px;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
     left: 435px;
+    display: flex;
+    flex-direction: row;
 }
 
 .cardsubtitle {
     margin-top: 4px;
 }
 
-.feels {
-    font: normal normal normal 13px/19px Jost;
-    color: #C5C5C5;
-
-}
-
 .section {
-    margin-right: 20px;
-    margin-bottom: 10px;
-    text-align: left;
     font: normal normal normal 12px/18px Jost;
     letter-spacing: 0px;
     opacity: 1;
-    text-align: right;
+    width: 320px;
+    height: 100px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: 20px;
+    padding-top: 18px;
+    display: flex;
+    flex-direction: row;
 }
 
 .weather {
@@ -103,6 +115,54 @@ sup {
     width: 100%;
 }
 
-.droplist {
-    margin-left: 95%;
+.characteristics p {
+    text-align: right;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: #459DE9;
+}
+
+.characteristics b {
+    color: #000000;
+}
+
+
+.characteristics {
+    margin-left: auto;
+    padding-top: 23px;
+    margin-right: 0px;
+    width: fit-content;
+    height:70px
+}
+
+.temp span {
+    margin-top: 10px;
+}
+
+.cardtitle span {
+    margin-left: auto;
+    margin-right: 0px;
+    top: 94px;
+    left: 326px;
+    width: fit-content;
+    height: 19px;
+    font: normal normal normal 13px/19px Jost;
+    letter-spacing: 0px;
+    color: #C5C5C5;
+    opacity: 1;
+}
+
+.krest {
+    padding-bottom: 20px;
+    margin-left: 12px;
+    margin-right: 0px;
+    border: none;
+    background-color: inherit;
+    color: #C5C5C5;
+    opacity: 1;
+    top: 88px;
+    left: 375px;
+    width: 7px;
+    height: 7px;
+
 }
