@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useTranslation, Trans } from 'react-i18next'
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
-// import GetGraph from '../GetGraph';
+import LineChart from '../LineChart';
 
 
 
@@ -26,10 +26,10 @@ function DisplayWeather(props) {
               <a href="http://openweathermap.org/img/wn/${icon}@2x.png"></a>
               <button className="krest" onClick={() => deleteForm(data.id)}>x</button>
            </span>
-               <h4 className="cardsubtitle">
+               <span className="cardsubtitle">
                {new Date().toLocaleDateString()}
-               </h4>
-               {/* <GetGraph forecast3hrs={this.props.forecast3hrs} /> */}
+               </span>
+               <LineChart/>
            <div className="section">
                 <div className="temp">
                 <h3>{Math.floor(data.main.temp - 273.15)}   <sup><sup>o</sup>C | <sup>o</sup>F</sup></h3>

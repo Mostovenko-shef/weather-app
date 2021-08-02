@@ -10,6 +10,8 @@ const lngs = {
 
 function Weather() {
     const APIKEY = '7152601474c1cf9265871aef6014d011';
+    
+
     const { t, i18n } = useTranslation('');
     const [form, setForm] = useState({ city:"" });
     const [weather, setWeather] = useState([]);
@@ -30,6 +32,8 @@ function Weather() {
             setWeather({data : data});
         }
     }
+
+
 
     const handleChange = (e) => {
         let name = e.target.name;
@@ -67,5 +71,6 @@ function Weather() {
         </div>
     )
 }
+
 
 export default Weather

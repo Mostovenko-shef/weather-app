@@ -34,13 +34,14 @@ h3 {
     top: 251px;
     left: 55px;
     width: 184px;
-    height: 64px;
+    height: 58px;
     text-align: left;
     font: normal normal normal 44px/64px Jost;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
     margin: 0px;
+    padding-top: 15px;
 }
 
 sup {
@@ -50,7 +51,6 @@ sup {
 .feels {
     font: normal normal normal 13px/19px Jost;
     color: #C5C5C5;
-    margin-top: 10px;
     text-align: left;
 }
 
@@ -59,6 +59,10 @@ sup {
     height: 70px;
     display: flex;
     flex-direction: column
+}
+
+.temp sup {
+    font: normal normal normal 22px/32px Jost;
 }
 
 .maincard {
@@ -94,6 +98,8 @@ sup {
 
 .cardsubtitle {
     margin-top: 4px;
+    font: normal normal 300 18px/26px Jost;
+
 }
 
 .section {
@@ -102,10 +108,10 @@ sup {
     opacity: 1;
     width: 320px;
     height: 100px;
-    margin-top: 80px;
+    margin-top: 0px;
     margin-left: auto;
     margin-right: 20px;
-    padding-top: 18px;
+    padding-top: 0px;
     display: flex;
     flex-direction: row;
 }
@@ -133,10 +139,6 @@ sup {
     margin-right: 0px;
     width: fit-content;
     height:70px
-}
-
-.temp span {
-    margin-top: 10px;
 }
 
 .cardtitle span {
