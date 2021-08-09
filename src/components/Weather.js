@@ -2,6 +2,7 @@ import React, {useState, Component} from 'react'
 import { useTranslation, Trans } from 'react-i18next'
 import DisplayWeather from './DisplayWeather';
 
+
 const lngs = {
     en: { nativeName: 'EN' },
     ru: { nativeName: 'RU' },
@@ -34,7 +35,6 @@ function Weather() {
     }
 
 
-
     const handleChange = (e) => {
         let name = e.target.name;
         let value = e.target.value;
@@ -59,6 +59,7 @@ function Weather() {
                 {t('Add')}
                 </button>
                 &nbsp;&nbsp;&nbsp;
+                <span className="options">
                 {Object.keys(lngs).map((lng) => (
                 <select key={lng} type="submit" onClick={() => i18n.changeLanguage(lng)}>              
                   <option>{lngs[lng].nativeName}</option>
@@ -66,6 +67,7 @@ function Weather() {
                 //   <option>{lngs[lng].nativeName}</option>    */}
                 </select>
                 ))}
+                </span>
             </form>
             {weather.data != undefined ? <div><DisplayWeather data={weather.data}/></div> : null}
         </div>

@@ -1,5 +1,4 @@
 input {
-    top: 20px;
     left: 40px;
     width: 230px;
     height: 20px;
@@ -14,6 +13,12 @@ input {
     margin-top: 20px;
     margin-left: 40px;
 }
+
+form {
+    display: flex;
+    flex-direction: row;
+}
+
 .getweather {
     top: 20px;
     left: 310px;
@@ -28,6 +33,7 @@ input {
     font: normal normal normal 14px/20px Jost;
     letter-spacing: 0px;
     color: #FFFFFF;
+    margin-top: 20px;
 }
 
 h3 {
@@ -42,6 +48,12 @@ h3 {
     opacity: 1;
     margin: 0px;
     padding-top: 15px;
+}
+
+h3 button {
+    border: #FFFFFF;
+    background-color: inherit;
+    font: normal normal normal 22px/32px Jost;
 }
 
 sup {
@@ -109,8 +121,6 @@ sup {
     width: 320px;
     height: 100px;
     margin-top: 0px;
-    margin-left: auto;
-    margin-right: 20px;
     padding-top: 0px;
     display: flex;
     flex-direction: row;
@@ -167,4 +177,14 @@ sup {
     width: 7px;
     height: 7px;
 
+}
+
+.options  {
+    margin-left: auto;
+    margin-right: 0px;
+    margin-top: 30px;
+}
+
+.options  select {
+    border: #FFFFFF;
 }

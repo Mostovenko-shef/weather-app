@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useTranslation, Trans } from 'react-i18next'
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
 import LineChart from '../LineChart';
-
-
+import './tempSwap';
+import { convertToCelsius, convertToFahrenheit } from './tempSwap';
 
 
 function DisplayWeather(props) {
@@ -14,8 +14,11 @@ function DisplayWeather(props) {
     },[])
 
     function deleteForm(id) {
-        let form = form.filter((form) => form.id !== id)
+        let form = form.filter((data) => data.id !== id)
     }
+   
+    // const temp = Math.floor(data.main.temp - 273.15);
+    const tempLike = Math.floor(data.main.feels_like - 273.15);
 
 
     return <div className="displayweather">
@@ -23,7 +26,6 @@ function DisplayWeather(props) {
            <span className="cardtitle">
               {data.name}, {data.sys.country}
               <span>{data.weather[0].description}</span>
-              <a href="http://openweathermap.org/img/wn/${icon}@2x.png"></a>
               <button className="krest" onClick={() => deleteForm(data.id)}>x</button>
            </span>
                <span className="cardsubtitle">
@@ -32,9 +34,13 @@ function DisplayWeather(props) {
                <LineChart/>
            <div className="section">
                 <div className="temp">
-                <h3>{Math.floor(data.main.temp - 273.15)}   <sup><sup>o</sup>C | <sup>o</sup>F</sup></h3>
+                <h3> {Math.floor(data.main.temp - 273.15)}   
+                    <sup><button className="tempCel" onClick = {convertToFahrenheit}>&deg;C</button> 
+                    | 
+                    <button className="tempFahr" onClick = {convertToCelsius}>&deg;F</button></sup>
+                </h3>
                 <span className="feels">
-                    {t('Feels like')}: {Math.floor(data.main.feels_like - 273.15)} 
+                    {t('Feels like')}: {tempLike} 
                 </span>
                 </div>
                 <div className="characteristics">
