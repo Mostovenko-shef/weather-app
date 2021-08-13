@@ -1,10 +1,12 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useEffect } from 'react'
 import { useTranslation, Trans } from 'react-i18next'
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
-import LineChart from '../LineChart';
+import { Localize } from 'react-redux-i18n';
 import './tempSwap';
 import { convertToCelsius, convertToFahrenheit } from './tempSwap';
+// import LineChart from '../Chart';
+
 
 
 function DisplayWeather(props) {
@@ -17,7 +19,7 @@ function DisplayWeather(props) {
         let form = form.filter((data) => data.id !== id)
     }
    
-    // const temp = Math.floor(data.main.temp - 273.15);
+
     const tempLike = Math.floor(data.main.feels_like - 273.15);
 
 
@@ -29,15 +31,15 @@ function DisplayWeather(props) {
               <button className="krest" onClick={() => deleteForm(data.id)}>x</button>
            </span>
                <span className="cardsubtitle">
-               {new Date().toLocaleDateString()}
+               {new Date().toLocaleString()}
                </span>
-               <LineChart/>
+                {/* <LineChart/> */}
            <div className="section">
                 <div className="temp">
                 <h3> {Math.floor(data.main.temp - 273.15)}   
-                    <sup><button className="tempCel" onClick = {convertToFahrenheit}>&deg;C</button> 
+                    <sup><button className="tempCel" onClick = {convertToFahrenheit}>°C</button> 
                     | 
-                    <button className="tempFahr" onClick = {convertToCelsius}>&deg;F</button></sup>
+                    <button className="tempFahr" onClick = {convertToCelsius}>°F</button></sup>
                 </h3>
                 <span className="feels">
                     {t('Feels like')}: {tempLike} 

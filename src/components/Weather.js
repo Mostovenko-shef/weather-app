@@ -1,11 +1,13 @@
 import React, {useState, Component} from 'react'
 import { useTranslation, Trans } from 'react-i18next'
 import DisplayWeather from './DisplayWeather';
+import LanguageSwitcher from './LanguageSwitcher';
+
 
 
 const lngs = {
     en: { nativeName: 'EN' },
-    ru: { nativeName: 'RU' },
+    ru: { nativeName: 'RU' }, 
     ua: { nativeName: 'UA' }
 };
 
@@ -51,7 +53,7 @@ function Weather() {
                 <input 
                   type="text" 
                   name="city" 
-                  placeholder={t("City name...")} 
+                  placeholder={t("City name...")}
                   onChange={e => handleChange(e)}
                 />
                 &nbsp;&nbsp;&nbsp;
@@ -60,13 +62,7 @@ function Weather() {
                 </button>
                 &nbsp;&nbsp;&nbsp;
                 <span className="options">
-                {Object.keys(lngs).map((lng) => (
-                <select key={lng} type="submit" onClick={() => i18n.changeLanguage(lng)}>              
-                  <option>{lngs[lng].nativeName}</option>
-                {/* //   <option>{lngs[lng].nativeName}</option> 
-                //   <option>{lngs[lng].nativeName}</option>    */}
-                </select>
-                ))}
+                    <LanguageSwitcher/>
                 </span>
             </form>
             {weather.data != undefined ? <div><DisplayWeather data={weather.data}/></div> : null}

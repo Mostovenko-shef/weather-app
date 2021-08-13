@@ -8,6 +8,6 @@
       "Pa": "Па",
       "m/s": "м/с",
       "City name...": "Наберіть місто...",
-      "{data}": "http://api.openweathermap.org/data/2.5/weather?id=${data}&lang=ua&appid=${APIKEY}"
+      "{{form.city}}": "https://api.openweathermap.org/data/2.5/weather?q={form.city}&lang=ua&appid={APIKEY}"
     }
 }

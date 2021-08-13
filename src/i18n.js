@@ -25,7 +25,7 @@ i18n
       en: lngEn,
       ru: lngRu,
       ua: lngUa
-    }
-  });
+    },
+});
 
 export default i18n;

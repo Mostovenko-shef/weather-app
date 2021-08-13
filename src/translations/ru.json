@@ -1,13 +1,13 @@
 {
-    "translation": {
-      "Add": "Добавить",
-      "Pressure": "Давление",
-      "Humidity": "Влажность",
-      "Wind": "Ветер",
-      "Feels like": "Ощущается как",
-      "Pa": "Па",
-      "m/s": "м/с",
-      "City name...": "Введите город...",
-      "{data}": "http://api.openweathermap.org/data/2.5/weather?q=${data}&lang=ru&appid=${APIKEY}"
-    }
+  "translation": {
+    "Add": "Добавить",
+    "Pressure": "Давление",
+    "Humidity": "Влажность",
+    "Wind": "Ветер",
+    "Feels like": "Ощущается как",
+    "Pa": "Па",
+    "m/s": "м/с",
+    "City name...": "Введите город...",
+    "getWeather": "{{weatherData}}"
   }
+}  
