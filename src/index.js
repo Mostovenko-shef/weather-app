@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+// import { Provider } from 'react-redux'
+// import { createStore, applyMiddleware } from 'redux';
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
 import './i18n';

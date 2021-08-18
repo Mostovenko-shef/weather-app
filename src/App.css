@@ -19,6 +19,11 @@ form {
     flex-direction: row;
 }
 
+canvas {
+    margin-top: 20px;
+    margin-right: 15px;
+}
+
 .getweather {
     top: 20px;
     left: 310px;
@@ -47,7 +52,7 @@ h3 {
     color: #000000;
     opacity: 1;
     margin: 0px;
-    padding-top: 15px;
+
 }
 
 h3 button {
@@ -80,7 +85,7 @@ sup {
 .maincard {
     top: 82px;
     left: 40px;
-    width: 325px;
+    width: 335px;
     height: 247px;
     background: #FFF1FE 0% 0% no-repeat padding-box;
     font-family: Jost;
@@ -89,15 +94,13 @@ sup {
     opacity: 1;
     margin: 22px 40px;
     padding-left: 15px;
-    padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 10px;
 }
 
 .cardtitle {
     top: 92px;
     width: inherit;
-    height: 23px;
+    height: 33px;
     text-align: left;
     font: normal normal normal 16px/23px Jost;
     letter-spacing: 0px;
@@ -109,21 +112,19 @@ sup {
 }
 
 .cardsubtitle {
-    margin-top: 4px;
     font: normal normal 300 18px/26px Jost;
 
 }
 
 .section {
-    font: normal normal normal 12px/18px Jost;
+    font: 12px/18px Jost;
     letter-spacing: 0px;
     opacity: 1;
     width: 320px;
-    height: 100px;
-    margin-top: 0px;
-    padding-top: 0px;
+    height: 80px;
     display: flex;
     flex-direction: row;
+    margin-right: 5px;
 }
 
 .weather {
@@ -145,10 +146,10 @@ sup {
 
 .characteristics {
     margin-left: auto;
-    padding-top: 23px;
-    margin-right: 0px;
     width: fit-content;
-    height:70px
+    height:auto;
+    margin-right: 5px;
+    padding-top: 10px;
 }
 
 .cardtitle span {
@@ -157,17 +158,21 @@ sup {
     top: 94px;
     left: 326px;
     width: fit-content;
-    height: 19px;
+    height: 29px;
     font: normal normal normal 13px/19px Jost;
     letter-spacing: 0px;
     color: #C5C5C5;
     opacity: 1;
+    display: flex;
+    flex-direction: row
 }
 
+
 .krest {
-    padding-bottom: 20px;
-    margin-left: 12px;
-    margin-right: 0px;
+    margin-left: 16px;
+    margin-right: 8px;
+    margin-top: 6px;
+    padding: 0px;
     border: none;
     background-color: inherit;
     color: #C5C5C5;
@@ -176,6 +181,7 @@ sup {
     left: 375px;
     width: 7px;
     height: 7px;
+    font-size: 7px;
 
 }
 
@@ -194,4 +200,18 @@ sup {
     background: #FFFFFF 0% 0% no-repeat padding-box;
 box-shadow: 0px 3px 6px #00000029;
 opacity: 1;
+}
+
+.picture img {
+    
+    opacity: 1;
+    height: 50px;
+}
+
+.gorod { 
+    margin-top: 10px;
+}
+
+.pogoda {
+    margin-top: 12px;
 }
